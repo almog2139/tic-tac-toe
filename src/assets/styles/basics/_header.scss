@@ -1,0 +1,123 @@
+//on ul in app header
+.main-nav {
+    @media (max-width: $mobile-breakpoint) {
+        position: fixed;
+        top: 10%;
+        overflow: hidden;
+        transition: max-height 0.8s;
+        background-color: rgba(0, 0, 0, 0.699);
+        display: flex;
+        flex-direction: column;
+        right: 0;
+        width: 40vw;
+        height: 100vh;
+        z-index: 3;
+    }
+    &.hide {
+        display: none;
+    }
+}
+
+.hamburger-btn {
+    @media (max-width: $mobile-breakpoint) {
+        display: block;
+    }
+    display: none;
+    width: 60px;
+    height: 24px;
+    position: relative;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+
+    & span {
+        display: block;
+        position: absolute;
+        height: 7px;
+        width: 100%;
+        background:#b939b9;
+        border-radius: 9px;
+        opacity: 1;
+        left: 0;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: 0.2s ease-in-out;
+        -moz-transition: 0.2s ease-in-out;
+        -o-transition: 0.2s ease-in-out;
+        transition: 0.2s ease-in-out;
+
+        &:nth-child(1) {
+            top: 0px;
+            -webkit-transform-origin: left center;
+            -moz-transform-origin: left center;
+            -o-transform-origin: left center;
+            transform-origin: left center;
+        }
+        &:nth-child(2) {
+            top: 12px;
+            -webkit-transform-origin: left center;
+            -moz-transform-origin: left center;
+            -o-transform-origin: left center;
+            transform-origin: left center;
+        }
+        &:nth-child(3) {
+            top: 24px;
+            -webkit-transform-origin: left center;
+            -moz-transform-origin: left center;
+            -o-transform-origin: left center;
+            transform-origin: left center;
+        }
+    }
+
+    &.open {
+        & span {
+            &:nth-child(1) {
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                transform: rotate(45deg);
+                top: -3px;
+                left: 8px;
+            }
+            &:nth-child(2) {
+                width: 0%;
+                opacity: 0;
+            }
+            &:nth-child(3) {
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                top: 39px;
+                left: 8px;
+            }
+        }
+    }
+}
+//if we want the header be in reletive
+
+// position: fixed;
+// left: 0;
+// top: 0;
+// z-index: 100;
+// width: 100%;
+// overflow: hidden;
+// height: 10vh;
+// color: white;
+// display: grid;
+
+
+//מירכז של נב לינק לאמצע מסך(li) 
+.nav-links {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
